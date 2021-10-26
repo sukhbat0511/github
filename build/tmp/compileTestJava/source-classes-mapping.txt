@@ -1,0 +1,6 @@
+sukhbat/orderme/domain/OrderTest.java
+ sukhbat.orderme.domain.OrderTest
+sukhbat/orderme/domain/CustomerTest.java
+ sukhbat.orderme.domain.CustomerTest
+sukhbat/orderme/domain/CreateOrderTest.java
+ sukhbat.orderme.domain.CreateOrderTest

@@ -12,9 +12,8 @@ public class FoodRepository
 
   public FoodRepository()
   {
-    this.foods.put("F1",  new Food("f1", "t1", 0, "n1"));
-    this.foods.put("F2",  new Food("f2", "t2" ,0,"n2" ));
-
+    this.foods.put("F1", new Food("f1", "t1", 0, "khushuur"));
+    this.foods.put("F2", new Food("f2", "t2", 0, "buuz"));
   }
 
   public Food findById(String foodId)
@@ -25,6 +24,6 @@ public class FoodRepository
     }
     else
 
-    return null;
+      return null;
   }
 }

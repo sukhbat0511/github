@@ -9,36 +9,43 @@ import sukhbat.orderme.domain.repositories.FoodRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
-public class CreateOrder {
+public class CreateOrder
+{
+  private final CustomerRepository customerRepository;
+  private final FoodRepository foodRepository;
 
-    private final CustomerRepository customerRepository = new CustomerRepository();
-    private final FoodRepository foodRepository = new FoodRepository();
+  public CreateOrder(CustomerRepository customerRepository, FoodRepository foodRepository)
+  {
+    this.customerRepository = Objects.requireNonNull(customerRepository);
+    this.foodRepository = Objects.requireNonNull(foodRepository);
+  }
 
-    public Order execute(String customerId, List<String> foodIds)
+  public Order execute(String customerId, List<String> foodIds)
+  {
+    Validate.notBlank(customerId);
+    Validate.notNull(foodIds);
+    Validate.notEmpty(foodIds);
+
+    Customer customer = customerRepository.findById(customerId);
+
+    if (null == customer)
     {
-        Validate.notBlank(customerId);
-        Validate.notNull(foodIds);
-        Validate.notEmpty(foodIds);
-
-        Customer customer = customerRepository.findById(customerId);
-
-        if (null == customer)
-        {
-            throw new IllegalArgumentException("Customer [" + customerId + "] doesnt exist!");
-        }
-
-        List<Food> foods = new ArrayList<>();
-        for (String foodId: foodIds)
-        {
-            Food food = foodRepository.findById(foodId);
-            if (null != food)
-            {
-                foods.add(food);
-            }
-        }
-
-        return new Order(UUID.randomUUID().toString(), customer, foods);
+      throw new IllegalArgumentException("Customer [" + customerId + "] doesnt exist!");
     }
+
+    List<Food> foods = new ArrayList<>();
+    for (String foodId : foodIds)
+    {
+      Food food = foodRepository.findById(foodId);
+      if (null != food)
+      {
+        foods.add(food);
+      }
+    }
+
+    return new Order(UUID.randomUUID().toString(), customer, foods);
+  }
 }
