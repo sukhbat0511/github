@@ -2,6 +2,8 @@ package sukhbat.orderme.domain.entities;
 
 import java.util.List;
 
+import org.apache.commons.lang3.Validate;
+
 public class Chef extends Entity
 {
 
@@ -12,6 +14,7 @@ public class Chef extends Entity
   {
     super(id);
     this.name = name;
+    this.name = Validate.notBlank(name);
   }
 
   public String getName()

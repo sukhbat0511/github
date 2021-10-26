@@ -78,33 +78,32 @@ public class CreateOrderTest
     Assert.assertEquals("C1", order.getCustomer().getId());
     Assert.assertEquals(2, order.getFoods().size());
     Assert.assertEquals("khushuur", order.getFoods().get(0).getName());
-
   }
 
-//  @Test(expected = NullPointerException.class)
-//  public void customershouldnotbenull()
-//  {
-//    Mockito.when(customerRepository.findById("C1")).thenReturn(null);
-//    CreateOrder useCase = new CreateOrder(customerRepository, foodRepository);
-//    List<String> foodIds = new ArrayList<>();
-//    foodIds.add("F1");
-//    foodIds.add("F2");
-//
-//    useCase.execute("C1", foodIds);
-//  }
+  //  @Test(expected = NullPointerException.class)
+  //  public void customershouldnotbenull()
+  //  {
+  //    Mockito.when(customerRepository.findById("C1")).thenReturn(null);
+  //    CreateOrder useCase = new CreateOrder(customerRepository, foodRepository);
+  //    List<String> foodIds = new ArrayList<>();
+  //    foodIds.add("F1");
+  //    foodIds.add("F2");
+  //
+  //    useCase.execute("C1", foodIds);
+  //  }
 
-//  @Mock
-//  FoodRepository foodRepository;
-//
-//  @Test(expected = NullPointerException.class)
-//  public void foodshouldnotbenull()
-//  {
-//    Mockito.when(foodRepository.findById("")).thenReturn(null);
-//    CreateOrder useCase = new CreateOrder(customerRepository, foodRepository);
-//    List<String> foodIds = new ArrayList<>();
-//    foodIds.add("F1");
-//    foodIds.add("F2");
-//
-//    useCase.execute("C1", foodIds);
-//  }
+  //  @Mock
+  //  FoodRepository foodRepository;
+  //
+  //  @Test(expected = NullPointerException.class)
+  //  public void foodshouldnotbenull()
+  //  {
+  //    Mockito.when(foodRepository.findById("")).thenReturn(null);
+  //    CreateOrder useCase = new CreateOrder(customerRepository, foodRepository);
+  //    List<String> foodIds = new ArrayList<>();
+  //    foodIds.add("F1");
+  //    foodIds.add("F2");
+  //
+  //    useCase.execute("C1", foodIds);
+  //  }
 }

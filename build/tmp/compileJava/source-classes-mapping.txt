@@ -1,15 +1,9 @@
-sukhbat/orderme/domain/entities/Chef.java
- sukhbat.orderme.domain.entities.Chef
 sukhbat/orderme/domain/repositories/FoodRepository.java
  sukhbat.orderme.domain.repositories.FoodRepository
-sukhbat/orderme/domain/entities/Entity.java
- sukhbat.orderme.domain.entities.Entity
-sukhbat/orderme/domain/entities/Order.java
- sukhbat.orderme.domain.entities.Order
+sukhbat/orderme/domain/usecases/CreateOrder.java
+ sukhbat.orderme.domain.usecases.CreateOrder
 sukhbat/orderme/domain/repositories/DeliveryRepository.java
  sukhbat.orderme.domain.repositories.DeliveryRepository
-sukhbat/orderme/domain/usecases/UseCase.java
- sukhbat.orderme.domain.usecases.UseCase
 sukhbat/orderme/domain/entities/Food.java
  sukhbat.orderme.domain.entities.Food
 sukhbat/orderme/domain/entities/Customer.java
@@ -17,7 +11,17 @@ sukhbat/orderme/domain/entities/Customer.java
 sukhbat/orderme/domain/entities/Delivery.java
  sukhbat.orderme.domain.entities.Delivery
  sukhbat.orderme.domain.entities.Delivery$Type
+sukhbat/orderme/domain/entities/Entity.java
+ sukhbat.orderme.domain.entities.Entity
+sukhbat/orderme/domain/usecases/UseCase.java
+ sukhbat.orderme.domain.usecases.UseCase
 sukhbat/orderme/domain/repositories/CustomerRepository.java
  sukhbat.orderme.domain.repositories.CustomerRepository
-sukhbat/orderme/domain/usecases/CreateOrder.java
- sukhbat.orderme.domain.usecases.CreateOrder
+sukhbat/orderme/domain/usecases/CreateFood.java
+ sukhbat.orderme.domain.usecases.CreateFood
+sukhbat/orderme/domain/entities/Order.java
+ sukhbat.orderme.domain.entities.Order
+sukhbat/orderme/domain/entities/Chef.java
+ sukhbat.orderme.domain.entities.Chef
+sukhbat/orderme/domain/repositories/ChefRepository.java
+ sukhbat.orderme.domain.repositories.ChefRepository
